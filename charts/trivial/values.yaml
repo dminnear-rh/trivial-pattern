@@ -1,0 +1,3 @@
+image: hashicorp/http-echo:latest
+containerPort: 5678
+replicas: 1
