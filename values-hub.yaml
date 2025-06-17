@@ -1,0 +1,29 @@
+clusterGroup:
+    name: hub
+    isHubCluster: true
+    namespaces:
+        - vault
+        - golang-external-secrets
+        - trivial-pattern
+    projects:
+        - hub
+        - trivial-pattern
+    subscriptions: {}
+    applications:
+        golang-external-secrets:
+            name: golang-external-secrets
+            namespace: golang-external-secrets
+            project: hub
+            chart: golang-external-secrets
+            chartVersion: 0.1.*
+        trivial:
+            name: trivial
+            namespace: trivial-pattern
+            project: trivial-pattern
+            path: charts/trivial
+        vault:
+            name: vault
+            namespace: vault
+            project: hub
+            chart: hashicorp-vault
+            chartVersion: 0.1.*
