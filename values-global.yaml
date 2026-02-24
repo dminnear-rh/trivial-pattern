@@ -1,0 +1,9 @@
+global:
+  pattern: trivial-pattern
+  secretLoader:
+    disabled: true
+main:
+  clusterGroupName: prod
+  multiSourceConfig:
+    enabled: true
+    clusterGroupChartVersion: 0.9.*
