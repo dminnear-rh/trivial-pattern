@@ -1,7 +1,7 @@
 clusterGroup:
   name: prod
   namespaces:
-    - trivial-pattern
+    trivial-pattern:
   subscriptions: {}
   applications:
     simple:

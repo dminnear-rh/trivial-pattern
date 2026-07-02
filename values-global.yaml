@@ -7,5 +7,4 @@ main:
   clusterGroupName: prod
   multiSourceConfig:
     enabled: true
-    clusterGroupGitRepoUrl: https://github.com/dminnear-rh/clustergroup-chart
-    clusterGroupChartGitRevision: disable-vault-role-when-secrets-disabled
+    clusterGroupChartVersion: 0.9.*
