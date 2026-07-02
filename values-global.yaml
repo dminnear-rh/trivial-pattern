@@ -2,7 +2,7 @@ global:
   pattern: trivial-pattern
   singleArgoCD: true
   secretLoader:
-    disabled: true
+    disabled: false
 main:
   clusterGroupName: prod
   multiSourceConfig:

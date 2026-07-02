@@ -1,9 +1,23 @@
 clusterGroup:
   name: prod
   namespaces:
+    external-secrets:
+    external-secrets-operator:
+      operatorGroup: true
+      targetNamespaces: []
     trivial-pattern:
-  subscriptions: {}
+    vault:
+  subscriptions:
+    eso:
+      name: openshift-external-secrets-operator
+      namespace: external-secrets-operator
+      channel: stable-v1
   applications:
+    openshift-external-secrets:
+      name: openshift-external-secrets
+      namespace: external-secrets
+      chart: openshift-external-secrets
+      chartVersion: 0.0.*
     simple:
       name: simple
       namespace: trivial-pattern
@@ -12,3 +26,8 @@ clusterGroup:
       name: trivial
       namespace: trivial-pattern
       path: charts/trivial
+    vault:
+      name: vault
+      namespace: vault
+      chart: hashicorp-vault
+      chartVersion: 0.1.*
